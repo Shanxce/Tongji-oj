@@ -1,0 +1,13 @@
+#include<cstdio>
+#include<cstring>
+using namespace std;
+const int N=200010,M=500010;
+struct stt//线段树要维护的min和min的位置w
+{
+	int m,w;
+}t[N<<2];
+struct node//链式前向星存边
+{
+	int to,la,v;
+}e[M];
+int n,m,tot=0,a,b,c,s
