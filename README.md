@@ -74,14 +74,13 @@ OJ网站的灵魂在评测机，既要精确检测出使用了多少内存和时
 
 ## 部分界面与功能展示
 #### 登录界面
-[![rs87OH.png](https://s3.ax1x.com/2020/12/22/rs87OH.png)](https://imgchr.com/i/rs87OH)
-
+![login](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/login.png)
 #### 主页
-[![rsGi0s.png](https://s3.ax1x.com/2020/12/22/rsGi0s.png)](https://imgchr.com/i/rsGi0s)
+![rsGi0s.png](https://s3.ax1x.com/2020/12/22/rsGi0s.png)](https://imgchr.com/i/rsGi0s)
 #### OJ问题查看
-[![rs8fFx.png](https://s3.ax1x.com/2020/12/22/rs8fFx.png)](https://imgchr.com/i/rs8fFx)
+![rs8fFx.png](https://s3.ax1x.com/2020/12/22/rs8fFx.png)](https://imgchr.com/i/rs8fFx)
 #### 提交问题状态
-[![rs8RT1.png](https://s3.ax1x.com/2020/12/22/rs8RT1.png)](https://imgchr.com/i/rs8RT1)
+![rs8RT1.png](https://s3.ax1x.com/2020/12/22/rs8RT1.png)](https://imgchr.com/i/rs8RT1)
 #### 问题详情
 [![rs8olD.png](https://s3.ax1x.com/2020/12/22/rs8olD.png)](https://imgchr.com/i/rs8olD)
 #### 提交新问题
