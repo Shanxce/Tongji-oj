@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title> Register &ndash; Tongji Oj </title>
+    <link rel="stylesheet" href="/static/login.css">
+    <!-- <script type="text/javascript">
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "a1fa9264-647e-4682-a37f-f2f73d238bc8";
+        CRISP_TOKEN_ID = '';
+        (function() {
+            d = document;
+            s = d.createElement("script");
+            s.src = "l.js";
+            s.async = 1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script> -->
+
+</head>
+
+<script src="/static/js/jquery.easing.min.js"></script>
+<script src="/static/js/jquery.min.js"></script>
+
+<body>
+
+    <section class="section2">
+
+        <div class="row">
+            <div class="offset">
+                <div class="logo_brand2">
+                    <img src="/static/assets/logo.svg" alt="logo" width="100" class="logo">
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="REGS">注册</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="../registerresult/" class="nee_validate_zhuce" method="POST" novalidate>
+                            <div class="row">
+                                <div class="form-group col-lg-6 col-sm-12 col-xs-12">
+                                    <label for="name">昵称</label>
+                                    <input id="name" type="text" class="form-control" name="name" required autofocus>
+                                    <div class="invalid-feedback">
+                                        请填写昵称
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-6 col-sm-12 col-xs-12">
+                                    <label for="email">邮箱</label>
+                                    <div class="input-group">
+                                        <input type="text" id="email" class="form-control col-7" name="email" required>
+                                        <div class="invalid-feedback">
+                                            请填写邮箱
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-lg-6 col-sm-12 col-xs-12">
+                                    <label for="passwd" class="d-block">密码</label>
+                                    <input id="passwd" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="passwd" required>
+                                    <div id="pwindicator" class="pwindicator">
+                                        <div class="bar"></div>
+                                        <div class="label"></div>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        请填写密码
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-6 col-sm-12 col-xs-12">
+                                    <label for="repasswd" class="d-block">重复密码</label>
+                                    <input id="repasswd" type="password" class="form-control" name="repasswd" required>
+                                    <div class="invalid-feedback">
+                                        请再次填写密码
+                                    </div>
+                                </div>
+
+
+                                <!-- <div id="get-code" class="form-group">
+                                <label for="get-code">二步验证</label>
+                                <input id="get-code" type="number" class="form-control" name="get-code" tabindex="1" maxlength="6" placeholder="请输入6位验证码" required="">
+                                <div class="invalid-feedback">
+                                    请输入验证码
+                                </div>
+                            </div> -->
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="verify_code" >验证码</label>
+                                <!-- <label for="repasswd" class="d-block">验证码</label> -->
+                                <table width = "100%">
+                                        <td width = "85%">
+                                            <input class="form-control" type="text" id="verify_code" name="verify_code" placeholder="验证码" required>
+                                        </td>
+                                        <td width = "15%">
+                                            <div class="input-group-append">
+                                                <button style = "width:100%" role = "form" class="btn btn-secondary btn-lg" type="button" id="get-code" >获取验证码</button>
+                                            </div>
+                                        </td>
+                                </table>
+                            </div>
+
+                            <br/>
+
+                            <div class="form-group">
+                                <button id="register-confirm" class="btn btn-primary btn-lg btn-block">
+                                    注册
+                                </button>
+                            </div>
+                        </form>
+
+                        {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+                        <p style="color:red!important">{{ message }}</p>
+                        {% endfor %} {% endif %} {% endwith %}
+
+                    </div>
+                </div>
+                <div class="mt-5 text-muted text-center">
+                    已有账号了？ <a href="../login/">点击登录</a>
+                </div>
+                <div class="simple-footer">
+                    Copyright &copy; 2021 KFC
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+</body>
+
+<script>
+    $('#get-code').on('click', function() {
+        $.post('/user/register/email/', {email:$('#email').val()}, function(data) {
+            if (data.code == 200)
+                alert('发送成功');
+            else
+                alert(data.msg);
+        }, 'json')
+    })
+</script>
+
+</html>

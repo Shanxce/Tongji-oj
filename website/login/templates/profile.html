@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>rolnan</title>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="js/dropdown.js"></script>
+    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/dropin.css">
+</head>
+
+<body background="img/backgroud4.jpg" style="background-size: cover;position: static;background-attachment: fixed;">
+    <ul class="topmenu">
+        <!-- <li><img src="img/logo.png" width="28" height="56"></li> -->
+        <li><a href="home.html" class="active floatleft"><img src="img/homebutton.png" width="42"
+                    height="32"><br>home</a></li>
+        <li>
+            <div class="dropdown floatright" style="margin-right:32px;">
+                <img src="img/profile-photo.jpg" class="circle-mainphoto-show">
+                <div class="dropdown-content">
+                    <a href="profile.html"><img src="img/profile.png" class="logo-show"><span
+                            class="dropdown-use">profile</span></a>
+                    <a href="enter.html"><img src="img/enter.png" class="logo-show"><span
+                            class="dropdown-use">enter</span></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <div class="clearfix section">
+        <div class="column sidemenu">
+            <ul>
+                <li><a href="home.html"><img src="img/hotbutton.png" width="42" height="42"><br>New Questions</a></li>
+                <li><a href="myquestion.html"><img src="img/questionbutton.png" width="42" height="42"><br>My Questions</a></li>
+                <li><a href="submit.html"><img src="img/submitbutton.png" width="42" height="42"><br>Submit Questions</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <p class="headeruse" data-scroll-reveal="enter from the top over 1s">Profile</p>
+            <div class="profile-content" data-scroll-reveal="enter from the top over 1s">
+                <!-- <img src="img/profile-photo.jpg" class="circle-photo-show">
+                            <span class="puse">nange</span> -->
+                <h2>Personal Information Settings</h2>
+                <div data-scroll-reveal="enter from the top over 1s"><span class="profile-content-use">
+                        User name</span>
+                    <input id="namechange" type="text" maxlength="60" value="" placeholder="rolnan" autocomplete="off">
+                    <button id="namechange-button" type="button" onclick="alert('rolnan success')">change</button>
+                </div>
+                <br>
+                <div data-scroll-reveal="enter from the top over 1s"><span class="profile-content-use">
+                    personalized signature</span>
+                <textarea name="profile-signature" rows="3" cols="20" maxlength="120"></textarea>
+                <button id="signaturechange-button" type="button" onclick="alert('rolnan success')">change</button>
+                </div>
+                <br>
+                <div data-scroll-reveal="enter from the top over 1s"><span class="profile-content-use">
+                        Profile photo</span>
+                    <img src="img/profile-photo.jpg" class="circle-photo-show-big">
+                    <button id="photochange-button" type="button" onclick="alert('rolnan success')">change</button>
+                </div>
+                <br>
+                <div data-scroll-reveal="enter from the top over 1s"><span class="profile-content-use">
+                        User e-mail</span>
+                    <input id="emailchange" type="text" maxlength="60" value="" placeholder="sb@126.com"
+                        autocomplete="off">
+                    <button id="emailchange-button" type="button" onclick="alert('rolnan success')">change</button>
+                </div>
+                <br>
+                <div data-scroll-reveal="enter from the top over 1s"><span class="profile-content-use">
+                        User password</span>
+                        <br>
+                    <span class="profile-content-password-use">old password</span>
+                    <input id="oldpassword" type="text" maxlength="60" value="" 
+                        autocomplete="off" style="margin-left:34.3px"><br>
+                    <span class="profile-content-password-use">new password</span>
+                    <input id="newpassword1" type="text" maxlength="60" value="" 
+                        autocomplete="off"  style="margin-left:28px"><br>
+                    <span class="profile-content-password-use">repeat password</span>
+                    <input id="newpassword2" type="text" maxlength="60" value="" 
+                        autocomplete="off">
+                    <button id="passwordchange-button" type="button" onclick="alert('rolnan success')">change</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>about us : The greatest lan-guo</p>
+    </div>
+</body>
+
+
+<script src="js/scrollReveal.min.js"></script>
+<script type="text/javascript">
+    (function ($) {
+        'use strict';
+        window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
+    })();
+</script>
+<script>
+    //切换选项卡jquery 实现
+    //通过改变样式实现切换
+    $(function () {
+        $(".change-button").on("click", function () {
+            $(this).addClass("change-button-active").siblings().removeClass("change-button-active");
+            $(".intro-main-container").eq($(".change-button").index(this)).show().siblings(".intro-main-container").hide();
+        });
+    });
+
+    //左侧手风琴下拉框
+    //通过判定是否存在id #open 有就slideup，否则就slidedown 并把相邻的所有同胞的子元素slideup。
+    $(function () {
+        $(".navigator-first").on("click", function () {
+            $('.navigator-second').stop();
+            $(this).siblings(".navigator-first").removeAttr("id");
+            if ($(this).attr("id") == "open") {
+                $(this).removeAttr("id").children(".navigator-second").slideUp();
+            } else {
+                $(this).attr("id", "open").children(".navigator-second").slideDown();
+                $(this).siblings(".navigator-first").children(".navigator-second").slideUp();
+            }
+        });
+
+
+    });
+</script>
+<script src="js/scrollReveal.min.js"></script>
+<script type="text/javascript">
+    (function ($) {
+        'use strict';
+        window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
+    })();
+</script>
+
+</html>

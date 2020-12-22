@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>rolnan</title>
+    <link rel="stylesheet" href="/static/css/css.css">
+    <script src="/static/js/dropdown.js"></script>
+    <link rel="stylesheet" href="/static/css/dropdown.css">
+</head>
+
+
+<body background="/static/img/backgroud4.jpg" onload="startClock()" onunload="stopClock()"
+style="background-size: cover;position: static;background-attachment: fixed;">
+    <ul class="topmenu">
+        <li><a href="/home/" class="active floatleft"><img src="/static/img/homebutton.png" width="42"
+                    height="32"><br>home</a></li>
+        <form action="search" method="POST">
+            <li style="float:left; position: relative; top:-72px; left: -60px;">
+                <input id="search_input" type="text" maxlength="60" value="" name="search_input">
+                <button id="search-button" type="submit">
+                    <img src="/static/img/search.png" width="20" height="20"></button>
+        </form>
+        <li>
+            <div id="dateTime" style="color: rgb(121, 235, 229);text-align:center; float:left;
+                font-size:24px; font-family:'Courier New', Courier, monospace; position: relative; left:68%; top:1.2em"></div>
+        </li>
+        <div class="dropdown floatright" style="margin-right:48px;">
+            <img src={{current_user.head}} class="circle-mainphoto-show">
+            <span style="color:azure">{{current_user.name}}</span>
+            <div class="dropdown-content">
+                <a href="/about/"><img src="/static/img/profile.png" class="logo-show">
+                    <span class="dropdown-use">profile</span>
+                </a>
+                <br>
+                <a href="/user/logout/"><img src="/static/img/enter.png" class="logo-show">
+                    <span class="dropdown-use">logout</span>
+                </a>
+                <br>
+            </div>
+        </div>
+    </ul>
+    <div class="clearfix section">
+        <div class="column sidemenu">
+            <ul>
+                <li><a href="./"><img src="/static/img/hotbutton.png" width="42" height="42"><br>New Questions</a></li>
+                <li><a href="submit/"><img src="/static/img/submitbutton.png" width="42" height="42"><br>Submit Questions</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <p class="headeruse" data-scroll-reveal="enter from the top over 1s">New Questions</p>
+            
+            <div class="left-navigator-container ">
+                <div class="navigator-content ">
+                    {% for ques, info, ans, urll in alldata%}
+                    <div class="navigator-first" data-scroll-reveal="enter from the top over 1s">
+                        <img src={{info[1]}} class="circle-photo-show">
+                        <span class="puse">{{info[0]}}</span>
+                        <span class="navigator-first-time">{{ques.question_create_time}}</span>
+                        <span class="navigator-first-time" style="right: 200px;">{{ques.pageview}} views</span>
+                        <h2 class="navigator-first-head">{{ques.question_title}}</h2>
+                        <br>
+                        <div class="navigator-second">
+                            {% for ansnew in ans%}
+                            <span class="navigator-second-content" style="margin-left:40px;">
+                                {{ansnew.answer_text}}</span>
+                            <span class="navigator-first-time">{{ansnew.answer_time}}</span><br><br>
+                            {% endfor %}
+                            <a href={{urll}}>
+                                <p class="navigator-second-content-showall">Show All Responses......</p>
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <p class="foot-showall" data-scroll-reveal="enter from the top over 1s">
+                <a class="backhome" href={{back_home_url}}>
+                    <input type="button" value="All Questions" style="color: rgb(102 145 224);
+                    font-size: 20px; width: 18%; background-color: rgba(243, 236, 236, 0.5);">
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>about us : The greatest lan-guo</p>
+    </div>
+</body>
+
+
+
+<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="80" src="/static/js/canvas-nest.js"></script>
+<!-- <script type="text/javascript" src="js/snow.js"></script>
+<script type="text/javascript">
+    //    窗口大小
+    var oPageX = window.screen.width;
+    var oPageY = window.screen.height;
+    var aSnow = [];
+    //    雪花模板
+    function snow(x, y, xspeed, yspeed, xsin, size) {//x水平位置,y垂直位置,xspeed水平步距,yspeed垂直步距,xsin振幅,size雪花大小
+        this.node = document.createElement('div');
+        this.x = x;
+        this.y = y;
+        this.xspeed = xspeed;
+        this.yspeed = yspeed;
+        this.xsin = xsin;
+        this.size = size;
+        this.createSnow = function () {
+            this.node.style.position = 'absolute';
+            this.node.style.top = this.y + 'px';
+            this.node.style.left = this.x + 'px';
+            this.node.innerHTML = '*';
+            document.body.appendChild(this.node);
+        };
+        this.createSnow();
+        this.snowMove = function () {
+            this.node.style.top = parseInt(this.node.style.top) + this.yspeed + 'px';//垂直方向运动
+            this.node.style.left = parseInt(this.node.style.left) + this.xsin * Math.sin(this.xspeed) + 'px';
+            this.node.style.fontSize = this.size + 'px';
+            //            this.node.style.color='rgb('+Math.ceil(Math.random()*255)+','+Math.ceil(Math.random()*255)+','+Math.ceil(Math.random()*255)+')';
+        };
+    }
+    //    创建雪花
+    function createSnow() {
+        aSnow.push(new snow(Math.random() * oPageX, -50, 0.02 + Math.random() / 10, 1 + Math.random(), Math.random() * 30, 20 + Math.random() * 30));
+    }
+    setInterval(createSnow, 400);//1s创建2.5雪花
+    //    雪花移动函数
+    function snowMove() {
+        for (var j = 0; j < aSnow.length; j++) {
+            aSnow[j].snowMove();
+            if (parseInt(aSnow[j].node.style.top) >= oPageY - 5 || parseInt(aSnow[j].node.style.left) >= oPageX - 5) {
+                aSnow[j].node.parentNode.removeChild(aSnow[j].node);
+                aSnow.splice(j, 1);
+            }
+        }
+    }
+    setInterval(snowMove, 10);
+</script> -->
+<script>
+    //切换选项卡jquery 实现
+    //通过改变样式实现切换
+    $(function () {
+        $(".change-button").on("click", function () {
+            $(this).addClass("change-button-active").siblings().removeClass("change-button-active");
+            $(".intro-main-container").eq($(".change-button").index(this)).show().siblings(".intro-main-container").hide();
+        });
+    });
+
+    //左侧手风琴下拉框
+    //通过判定是否存在id #open 有就slideup，否则就slidedown 并把相邻的所有同胞的子元素slideup�?
+    $(function () {
+        $(".navigator-first").on("click", function () {
+            $('.navigator-second').stop();
+            $(this).siblings(".navigator-first").removeAttr("id");
+            if ($(this).attr("id") == "open") {
+                $(this).removeAttr("id").children(".navigator-second").slideUp();
+            } else {
+                $(this).attr("id", "open").children(".navigator-second").slideDown();
+                $(this).siblings(".navigator-first").children(".navigator-second").slideUp();
+            }
+        });
+
+
+    });
+</script>
+<script src="/static/js/scrollReveal.min.js"></script>
+<script type="text/javascript">
+    (function ($) {
+        'use strict';
+        window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
+    })();
+</script>
+
+
+
+<script type="text/javascript" charset="utf-8" async=""
+    src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+    setTimeout(() => {
+        L2Dwidget.init({
+            "model": {
+                "scale": 0.5
+            },
+            "display": {
+                "position": "right",
+                "width": 120,
+                "height": 180,
+                "hOffset": 0,
+                "vOffset": -20
+            },
+            "mobile": {
+                "show": true,
+                "scale": 0.5
+            },
+            "react": {
+                "opacityDefault": 0.7,
+                "opacityOnHover": 0.2
+            }
+        });
+    }, 1000)
+</script>
+
+<script>
+    Date.prototype.format = function (fmt) {
+        var o = {
+            "y+": this.getFullYear, //年
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "h+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds() //秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+    setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+</script>
+
+
+</html>

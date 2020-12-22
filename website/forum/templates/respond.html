@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>rolnan</title>
+    <link rel="stylesheet" href="/static/css/css.css">
+    <script src="/static/js/dropdown.js"></script>
+    <link rel="stylesheet" href="/static/css/dropdown.css">
+</head>
+
+<body background="/static/img/backgroud4.jpg" style="background-size: cover;position: static;background-attachment: fixed;">
+    <ul class="topmenu">
+        <!-- <li><img src="img/logo.png" width="28" height="56"></li> -->
+        <li><a href="/home/" class="active floatleft"><img src="/static/img/homebutton.png" width="42"
+                    height="32"><br>home</a></li>
+        <li>
+            <div id="dateTime"
+                style="color: rgb(121, 235, 229);text-align:center; float:left;
+                                font-size:24px; font-family:'Courier New', Courier, monospace; position: relative; left:68%; top:1.2em"
+                ></div>
+        </li><div class="dropdown floatright" style="margin-right:48px;">
+            <img src={{current_user.head}}  class="circle-mainphoto-show">
+            <span style="color:azure">{{current_user.name}}</span>
+            <div class="dropdown-content">
+                <a href="/about/"><img src="/static/img/profile.png" class="logo-show">
+                    <span class="dropdown-use">profile</span>
+                </a>
+                <br>
+                <a href="/user/logout/"><img src="/static/img/enter.png" class="logo-show">
+                    <span class="dropdown-use">logout</span>
+                </a>
+                <br>
+            </div>
+        </div>
+    </ul>
+
+    <div class="clearfix section">
+        <div class="column sidemenu">
+            <ul>
+                <li><a href={{back_home_url}}><img src="/static/img/hotbutton.png" width="42" height="42"><br>New Questions</a></li>
+            </ul>
+        </div>
+
+        <div class="content" style="margin-bottom:5em;">
+            <p class="headeruse" data-scroll-reveal="enter from the top over 1s">All responses</p>
+            <div class="profile-content" style="border-width: 0px 0px 4px 2px;border-style: solid solid solid solid;
+            border-color:red red red red; background-color: rgba(255, 255, 255, 0.8);" data-scroll-reveal="enter from the top over 1s">
+                <img src={{question_info[1].user_head}} class="circle-photo-show">
+                <span class="puse">{{question_info[1].user_name}}</span>
+                <span class="navigator-first-time">{{question_info[0].question_create_time}}</span>
+                <span class="navigator-first-time" style="right: 200px;">{{question_info[0].pageview}} views</span>
+                <div style="width: 80%;">
+                    <p class="navigator-first-head">{{question_info[0].question_title}}</p>
+                    <p class="navigator-first-content">{{question_info[0].question_text}}</p>
+                </div>
+            </div>
+            {% for ansnew,creator,jump_url in answers_info%}
+            <div class="profile-content" style="border-width: 0px 0px 2px 1px;border-style: solid solid solid solid;
+            border-color:red red orange orange; width:78%; margin-left:3em;" data-scroll-reveal="enter from the top over 1s">
+                <div style="width:100%; margin-bottom:20px" data-scroll-reveal="enter from the top over 1s">
+                    <img src={{creator.user_head}} class="navigator-second-circle-photo-show">
+                    <span class="puse">{{creator.user_name}}</span>
+
+                    {% if creator.user_id == current_user.id %}
+                    <a href={{jump_url}} style="position:fixed; left:93%;">delete</a>
+                    {% endif %}
+                    
+                    <span class="navigator-first-time" style="left:73%;">{{ansnew.answer_time}}</span>
+
+                    <!-- <p>1{{creator.user_id}}</p>
+                    <p>2{{current_user.id}}</p> -->
+                    
+                    
+                    
+                    <br><br>
+                    <span class="responds-content">
+                        {{ansnew.answer_text}}</span>
+                </div>
+            </div>
+            {% endfor %}
+            
+            <p class="foot-showall" data-scroll-reveal="enter from the top over 1s">
+                <a class="backhome" href={{back_home_url}}>
+                    <input type="button" value="All Questions" style="color: rgb(102 145 224);
+                    font-size: 20px; width: 18%; background-color: rgba(243, 236, 236, 0.5);">
+                </a>
+            </p>
+
+            <form action="./submitresult/" method="POST">
+                <div class="navigator-first"  style="width:75%; position: fixed; bottom: 18px; left:200px; 
+                        border-radius: 20px 20px 0px 0px;background-color: rgba(240, 240, 240 ,0.8)">
+                    <div style="width:80%;">
+                        <span style="color:black;">Reply</span>
+                        <input id="reply_submit" name="reply_submit" type="text" maxlength="240" style="width:480px" value="">
+                        <button name="reply-button" type="submit">
+                            reply</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+    </div>
+
+    <div class="footer">
+        <p>about us : The greatest lan-guo</p>
+    </div>
+</body>
+
+
+<script src="/static/js/scrollReveal.min.js"></script>
+<script type="text/javascript">
+    (function ($) {
+        'use strict';
+        window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
+    })();
+</script>
+<script>
+    //�л�ѡ�jquery ʵ��
+    //ͨ���ı���ʽʵ���л�
+    $(function () {
+        $(".change-button").on("click", function () {
+            $(this).addClass("change-button-active").siblings().removeClass("change-button-active");
+            $(".intro-main-container").eq($(".change-button").index(this)).show().siblings(".intro-main-container").hide();
+        });
+    });
+
+    //����ַ���������?
+    //ͨ���ж��Ƿ����id #open �о�slideup�������slidedown �������ڵ�����ͬ������Ԫ��slideup��
+    $(function () {
+        $(".navigator-first").on("click", function () {
+            $('.navigator-second').stop();
+            $(this).siblings(".navigator-first").removeAttr("id");
+            if ($(this).attr("id") == "open") {
+                $(this).removeAttr("id").children(".navigator-second").slideUp();
+            } else {
+                $(this).attr("id", "open").children(".navigator-second").slideDown();
+                $(this).siblings(".navigator-first").children(".navigator-second").slideUp();
+            }
+        });
+
+
+    });
+</script>
+<script src="/static/js/scrollReveal.min.js"></script>
+<script type="text/javascript">
+    (function ($) {
+        'use strict';
+        window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
+    })();
+</script>
+
+<script type="text/javascript" charset="utf-8" async=""
+    src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+    setTimeout(() => {
+        L2Dwidget.init({
+            "model": {
+                "scale": 0.5
+            },
+            "display": {
+                "position": "right",
+                "width": 120,
+                "height": 180,
+                "hOffset": 0,
+                "vOffset": -20
+            },
+            "mobile": {
+                "show": true,
+                "scale": 0.5
+            },
+            "react": {
+                "opacityDefault": 0.7,
+                "opacityOnHover": 0.2
+            }
+        });
+    }, 1000)
+</script>
+
+<script>
+    Date.prototype.format = function (fmt) {
+        var o = {
+            "y+": this.getFullYear, //年
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "h+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds() //秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+    setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+</script>
+
+</html>

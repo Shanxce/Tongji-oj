@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Begainning of CS - Problem</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/assets/img/favicon.png" rel="icon">
+  <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="/static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="{{current_user.head}}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="/about/">{{current_user.name}}</a></h1>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="{{url_for('home.home')}}"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="{{url_for('home.ShowUserPage')}}"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="{{url_for('home.Status')}}"><i class="bx bx-book-content"></i> Status</a></li>
+          <li class="active"><a href="{{url_for('home.problem')}}"><i class="bx bx-server"></i> Problem</a></li>
+          <li><a href="{{url_for('home.problem_add')}}"><i class="bx bx-envelope"></i> Publish</a></li>
+          <li><a href="{{url_for('user.UserLogout')}}"><i class="bx bx-user"></i> Logout</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <ol>
+            <li><a href="{{url_for('home.home')}}">Home</a></li>
+            <li>Problem</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Problem Section ======= -->
+    <section id="problem" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Problem</h2>
+          <p>We have all our problems here. You can browse them with tags and choose any of them to begin your coding journey.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-DP">DP</li>
+              <li data-filter=".filter-LCA">LCA</li>
+              <li data-filter=".filter-DataStructure">DataStructure</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+          {%for row in rows%}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-DP">
+            <div class="portfolio-wrap" style="background-color:rgb(236, 227, 217); border-radius:10px; ">
+              <h3 class="img-fluid" alt="" style="text-align:center;">{{row[0]}}</h3>
+              <div class="portfolio-links">
+                <a href="{{row[1]}}/" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          {%endfor%}
+
+
+        </div>
+
+      </div>
+    </section><!-- End problem Section -->
+
+    <!-- ======= Teacher Section ======= -->
+    <section id="teacher" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Teacher Team</h2>
+          <p>We have the best <strong>Teacher Team</strong>. Here you can get some information to catch a glimpse.</p>
+        </div>
+
+        <div class="owl-carousel testimonials-carousel">
+
+          <div class="testimonial-item" data-aos="fade-up">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              How dare you relaxing? Have you finished your big homework??? Study now.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{{url_for('static',filename='assets/img/testimonials/Shenjian.jpg')}}" class="testimonial-img" alt="">
+            <h3>Jian Shen</h3>
+            <h4>Engineer</h4>
+          </div>
+
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              You cannot only learn what I said in class.You need to find what you should learn.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{{url_for('static',filename='assets/img/testimonials/Zhaojunqiao.jpg')}}" class="testimonial-img" alt="">
+            <h3>Junqiao Zhao</h3>
+            <h4>Doctor</h4>
+          </div>
+
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Teacher content 3
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{{url_for('static',filename='assets/img/testimonials/Yechen.jpg')}}" class="testimonial-img" alt="">
+            <h3>Chen Ye</h3>
+            <h4>Doctor</h4>
+          </div>
+
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Teacher content 4
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{{url_for('static',filename='assets/img/testimonials/Chenyufei.jpg')}}" class="testimonial-img" alt="">
+            <h3>Yufei Chen</h3>
+            <h4>Doctor</h4>
+          </div>
+
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Teacher content 5
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{{url_for('static',filename='assets/img/testimonials/Wuyan.jpg')}}" class="testimonial-img" alt="">
+            <h3>Yan Wu</h3>
+            <h4>Doctor</h4>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Teacher Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>CS of Tongji</span></strong>
+      </div>
+      <div class="credits">
+        Designed by CS Group2
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="/static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="/static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="/static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="/static/assets/vendor/typed.js/typed.min.js"></script>
+  <script src="/static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/assets/js/main.js"></script>
+
+</body>
+
+</html>

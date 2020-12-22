@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>rolnan</title>
+    <link rel="stylesheet" href="/static/css/css.css">
+    <script src="/static/js/dropdown.js"></script>
+    <link rel="stylesheet" href="/static/css/dropdown.css">
+</head>
+
+<body background="/static/img/backgroud4.jpg" style="background-size: cover;position: static;background-attachment: fixed;">
+    <ul class="topmenu">
+        <!-- <li><img src="img/logo.png" width="28" height="56"></li> -->
+        <li><a href="/home/" class="active floatleft"><img src="/static/img/homebutton.png" width="42"
+                    height="32"><br>home</a></li>
+        <li>
+        <li>
+            <div id="dateTime" style="color: rgb(121, 235, 229);text-align:center; float:left;
+                        font-size:24px; font-family:'Courier New', Courier, monospace; position: relative; left:68%; top:1.2em"
+                ></div>
+        </li>
+        <div class="dropdown floatright" style="margin-right:48px;">
+            <img src={{current_user.head}} class="circle-mainphoto-show">
+            <span style="color:azure">{{current_user.name}}</span>
+            <div class="dropdown-content">
+                <a href="/about/"><img src="/static/img/profile.png" class="logo-show"><span
+                        class="dropdown-use">profile</span></a><br>
+                <a href="/user/logout/"><img src="/static/img/enter.png" class="logo-show"><span
+                        class="dropdown-use">logout</span></a>
+            </div>
+        </div>
+    </ul>
+
+    <div class="clearfix section">
+        <div class="column sidemenu">
+            <ul>
+                <li><a href=".."><img src="/static/img/hotbutton.png" width="42" height="42"><br>New Questions</a></li>
+                <li><a href="./"><img src="/static/img/submitbutton.png" width="42" height="42"><br>Submit
+                        Questions</a></li>
+            </ul>
+        </div>
+        <form action="../submitresult/" method="POST">
+            <div class="content">
+                <p class="headeruse" style="left:40px; position:relative;"
+                data-scroll-reveal="enter from the top over 1s">Submit Questions</p>
+                <div class="profile-content" style="width:105%" data-scroll-reveal="enter from the top over 1s">
+                    <img src={{current_user.head}} class="circle-photo-show">
+                    <span class="puse">{{current_user.name}}</span>
+                    <br><br>
+    
+                    <div style="width:80%; margin-left:40px">
+                        <span class="submit-title">Title (less than 60)</span><br>
+                        <textarea id="submit_title" name="submit_title" type="text" maxlength="60" rows="2" cols="60" value=""
+                            autocomplete="off"></textarea>
+                    </div>
+                    <br>
+                    <div style="width:80%; margin-left:40px">
+                        <span class="submit-title">Details (less than 300)</span><br>
+                        <textarea  id="submit_text" name="submit_text" type="text" maxlength="600" rows="15" cols="60" value=""
+                            autocomplete="off"></textarea>
+                    </div>
+                    <button id="submit-question-button" type="submit">submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>about us : The greatest lan-guo</p>
+    </div>
+</body>
+
+
+<script src="/static/js/scrollReveal.min.js"></script>
+<script type="text/javascript">
+    (function ($) {
+        'use strict';
+        window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
+    })();
+</script>
+<script>
+    //�л�ѡ�jquery ʵ��
+    //ͨ���ı���ʽʵ���л�
+    $(function () {
+        $(".change-button").on("click", function () {
+            $(this).addClass("change-button-active").siblings().removeClass("change-button-active");
+            $(".intro-main-container").eq($(".change-button").index(this)).show().siblings(".intro-main-container").hide();
+        });
+    });
+
+    //����ַ���������?
+    //ͨ���ж��Ƿ����id #open �о�slideup�������slidedown �������ڵ�����ͬ������Ԫ��slideup��
+    $(function () {
+        $(".navigator-first").on("click", function () {
+            $('.navigator-second').stop();
+            $(this).siblings(".navigator-first").removeAttr("id");
+            if ($(this).attr("id") == "open") {
+                $(this).removeAttr("id").children(".navigator-second").slideUp();
+            } else {
+                $(this).attr("id", "open").children(".navigator-second").slideDown();
+                $(this).siblings(".navigator-first").children(".navigator-second").slideUp();
+            }
+        });
+
+
+    });
+</script>
+<script src="/static/js/scrollReveal.min.js"></script>
+<script type="text/javascript">
+    (function ($) {
+        'use strict';
+        window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
+    })();
+</script>
+
+<script>
+    Date.prototype.format = function (fmt) {
+        var o = {
+            "y+": this.getFullYear, //�?
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //�?
+            "h+": this.getHours(), //小时
+            "m+": this.getMinutes(), //�?
+            "s+": this.getSeconds() //�?
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+    setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+</script>
+
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <title> log&nbsp;in &ndash; Tongji Oj </title>
+    <!-- import css 链接外部的样式表-->
+    <link rel="stylesheet" href="/static/login.css">
+
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="left_part">
+                <div class="main_box_left">
+                    <div class="logo_brand">
+                        <img src="/static/assets/logo.svg" alt="logo" width="100" class="logo">
+                    </div>
+                    <h4 class="welcome_title">欢迎登陆同济OJ</h4>
+                    <p class="beside_welcome_title"> 积累就是成长</p>
+                    <form action="../loginresult/" method="POST" class="need_validate" novalidate="">
+                        <div class="login-form-item">
+                            <div class="form-group">
+                                <label for="email">邮箱</label>
+                                <input id="email" type="email" class="form-control" name="email" tabindex="1" required="" autofocus="">
+                                <div class="invalid-feedback">
+                                    请填写邮箱
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="d-block">
+                                    <label for="password" class="control-label">密码</label>
+                                </div>
+                                <input id="password" type="password" class="form-control" name="password" tabindex="2" required="">
+                                <div class="invalid-feedback">
+                                    请填写密码
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group text-right">
+                            <button type="submit" class="btn btn-primary btn-lg btn-icon icon-right login" tabindex="4"> 登录  </button>
+                        </div>
+                    </form>
+
+                    {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+                    <p style="color:red!important">{{ message }}</p>
+                    {% endfor %} {% endif %} {% endwith %}
+
+                    <div class="register">
+                        还没有账号？ <a href="../register/">马上注册</a>
+                    </div>
+                    <div class="bottom_santances">
+                        Copyright © 2021 KFC
+                    </div>
+                </div>
+            </div>
+            <div class="right_part" style="background-image: url(/static/assets/tjoj.jpg);">
+                <div class="gradient-bottom">
+                    <h1 class="font-weight-bold">Welcome to Tongji Online Judge</h1>
+                    <h5 class="font-weight-normal">World Without End </h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <!-- the_biggest_outer_cowl -->
+
+
+    <!-- <script>
+        var twoFA = false;
+
+        function login() {
+            if (!$("#password").val() || !$("#email").val()) {
+                return false;
+            }
+
+
+            if (twoFA == true) {
+                if (!$("#2fa-code").val()) {
+                    return false;
+                }
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/user/login/",
+                dataType: "json",
+                data: {
+                    email: $("#email").val(),
+                    passwd: $("#password").val(),
+                    code: $("#2fa-code").val()
+                },
+                success: function(data) {
+                    if (data.ret == 1) {
+                        window.location.assign('/user')
+                    } else if (data.ret == 2) {
+                        $('.login-form-item').hide('500');
+                        $('form').removeClass('was-validated');
+                        $('#2fa-form').show('fast');
+                    } else {
+                        var errorMsg = '密码或邮箱不正确';
+                        if (twoFA == true) {
+                            errorMsg = '两步验证码错误'
+                        }
+                        swal('出错了', errorMsg, 'error');
+                    }
+                }
+            });
+        }
+
+        $("html").keydown(function(event) {
+            if (event.keyCode == 13) {
+                login();
+            }
+        });
+
+        $(".login").click(function() {
+            login();
+        });
+    </script> -->
+
+</body>
+
+</html>
