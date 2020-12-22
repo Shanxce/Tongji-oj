@@ -127,19 +127,19 @@ OJ网站的灵魂在评测机，既要精确检测出使用了多少内存和时
 
 
 
-<a href="https://imgchr.com/i/rs8olD"><img src="https://s3.ax1x.com/2020/12/22/rs8olD.png" alt="rs8olD.png" border="0"></a>
-<a href="https://imgchr.com/i/rs8fFx"><img src="https://s3.ax1x.com/2020/12/22/rs8fFx.png" alt="rs8fFx.png" border="0"></a>
-<a href="https://imgchr.com/i/rs8hY6"><img src="https://s3.ax1x.com/2020/12/22/rs8hY6.png" alt="rs8hY6.png" border="0"></a>
-<a href="https://imgchr.com/i/rs8RT1"><img src="https://s3.ax1x.com/2020/12/22/rs8RT1.png" alt="rs8RT1.png" border="0"></a>
-<a href="https://imgchr.com/i/rs87OH"><img src="https://s3.ax1x.com/2020/12/22/rs87OH.png" alt="rs87OH.png" border="0"></a>
-<a href="https://imgchr.com/i/rs8vff"><img src="https://s3.ax1x.com/2020/12/22/rs8vff.png" alt="rs8vff.png" border="0"></a>
-<a href="https://imgchr.com/i/rs8Xkt"><img src="https://s3.ax1x.com/2020/12/22/rs8Xkt.png" alt="rs8Xkt.png" border="0"></a>
-<a href="https://imgchr.com/i/rs84fK"><img src="https://s3.ax1x.com/2020/12/22/rs84fK.png" alt="rs84fK.png" border="0"></a>
-<a href="https://imgchr.com/i/rs8jtP"><img src="https://s3.ax1x.com/2020/12/22/rs8jtP.png" alt="rs8jtP.png" border="0"></a>
-<a href="https://imgchr.com/i/rs8zp8"><img src="https://s3.ax1x.com/2020/12/22/rs8zp8.png" alt="rs8zp8.png" border="0"></a>
-<a href="https://imgchr.com/i/rsG9XQ"><img src="https://s3.ax1x.com/2020/12/22/rsG9XQ.png" alt="rsG9XQ.png" border="0"></a>
-<a href="https://imgchr.com/i/rsGPmj"><img src="https://s3.ax1x.com/2020/12/22/rsGPmj.png" alt="rsGPmj.png" border="0"></a>
-<a href="https://imgchr.com/i/rsGi0s"><img src="https://s3.ax1x.com/2020/12/22/rsGi0s.png" alt="rsGi0s.png" border="0"></a>
+[url=https://imgchr.com/i/rs8olD][img]https://s3.ax1x.com/2020/12/22/rs8olD.png[/img][/url]
+[url=https://imgchr.com/i/rs8fFx][img]https://s3.ax1x.com/2020/12/22/rs8fFx.png[/img][/url]
+[url=https://imgchr.com/i/rs8hY6][img]https://s3.ax1x.com/2020/12/22/rs8hY6.png[/img][/url]
+[url=https://imgchr.com/i/rs8RT1][img]https://s3.ax1x.com/2020/12/22/rs8RT1.png[/img][/url]
+[url=https://imgchr.com/i/rs87OH][img]https://s3.ax1x.com/2020/12/22/rs87OH.png[/img][/url]
+[url=https://imgchr.com/i/rs8vff][img]https://s3.ax1x.com/2020/12/22/rs8vff.png[/img][/url]
+[url=https://imgchr.com/i/rs8Xkt][img]https://s3.ax1x.com/2020/12/22/rs8Xkt.png[/img][/url]
+[url=https://imgchr.com/i/rs84fK][img]https://s3.ax1x.com/2020/12/22/rs84fK.png[/img][/url]
+[url=https://imgchr.com/i/rs8jtP][img]https://s3.ax1x.com/2020/12/22/rs8jtP.png[/img][/url]
+[url=https://imgchr.com/i/rs8zp8][img]https://s3.ax1x.com/2020/12/22/rs8zp8.png[/img][/url]
+[url=https://imgchr.com/i/rsG9XQ][img]https://s3.ax1x.com/2020/12/22/rsG9XQ.png[/img][/url]
+[url=https://imgchr.com/i/rsGPmj][img]https://s3.ax1x.com/2020/12/22/rsGPmj.png[/img][/url]
+[url=https://imgchr.com/i/rsGi0s][img]https://s3.ax1x.com/2020/12/22/rsGi0s.png[/img][/url]
 <!-- 
 ```flow
 st=>start: 开始
