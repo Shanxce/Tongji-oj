@@ -72,8 +72,35 @@ OJ网站的灵魂在评测机，既要精确检测出使用了多少内存和时
 张馨月|1952339|OJ功能前端页面部分
 <hr>
 
+## 部分界面与功能展示
+#### 登录界面
+[![rs87OH.png](https://s3.ax1x.com/2020/12/22/rs87OH.png)](https://imgchr.com/i/rs87OH)
 
-
+#### 主页
+[![rsGi0s.png](https://s3.ax1x.com/2020/12/22/rsGi0s.png)](https://imgchr.com/i/rsGi0s)
+#### OJ问题查看
+[![rs8fFx.png](https://s3.ax1x.com/2020/12/22/rs8fFx.png)](https://imgchr.com/i/rs8fFx)
+#### 提交问题状态
+[![rs8RT1.png](https://s3.ax1x.com/2020/12/22/rs8RT1.png)](https://imgchr.com/i/rs8RT1)
+#### 问题详情
+[![rs8olD.png](https://s3.ax1x.com/2020/12/22/rs8olD.png)](https://imgchr.com/i/rs8olD)
+#### 提交新问题
+[![rs8hY6.png](https://s3.ax1x.com/2020/12/22/rs8hY6.png)](https://imgchr.com/i/rs8hY6)
+#### 问题讨论区（论坛）
+[![rs8zp8.png](https://s3.ax1x.com/2020/12/22/rs8zp8.png)](https://imgchr.com/i/rs8zp8)
+#### 搜索问题
+[![rsG9XQ.png](https://s3.ax1x.com/2020/12/22/rsG9XQ.png)](https://imgchr.com/i/rsG9XQ)
+#### 点击问题查看热门回复
+[![rs8vff.png](https://s3.ax1x.com/2020/12/22/rs8vff.png)](https://imgchr.com/i/rs8vff)
+#### 查看全部回复
+[![rsGPmj.png](https://s3.ax1x.com/2020/12/22/rsGPmj.png)](https://imgchr.com/i/rsGPmj)
+#### 回复问题
+[![rs84fK.png](https://s3.ax1x.com/2020/12/22/rs84fK.png)](https://imgchr.com/i/rs84fK)
+#### 回复成功，此时可以删除自己的回复
+[![rs8jtP.png](https://s3.ax1x.com/2020/12/22/rs8jtP.png)](https://imgchr.com/i/rs8jtP)
+#### 提交讨论问题
+[![rs8Xkt.png](https://s3.ax1x.com/2020/12/22/rs8Xkt.png)](https://imgchr.com/i/rs8Xkt)
+<hr>
 
 ## 项目进度
 
@@ -95,6 +122,9 @@ OJ网站的灵魂在评测机，既要精确检测出使用了多少内存和时
 2020-12-21 13:00|功能整合完成
 2020-12-21 21:00|修复BUG
 <hr>
+
+
+
 
 
 
