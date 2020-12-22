@@ -76,29 +76,29 @@ OJ网站的灵魂在评测机，既要精确检测出使用了多少内存和时
 #### 登录界面
 ![image](readme_img/login.png)
 #### 主页
-![rsGi0s.png](https://s3.ax1x.com/2020/12/22/rsGi0s.png)](https://imgchr.com/i/rsGi0s)
+![image](readme_img/home.png)
 #### OJ问题查看
-![rs8fFx.png](https://s3.ax1x.com/2020/12/22/rs8fFx.png)](https://imgchr.com/i/rs8fFx)
+![image](readme_img/problem.png)
 #### 提交问题状态
-![rs8RT1.png](https://s3.ax1x.com/2020/12/22/rs8RT1.png)](https://imgchr.com/i/rs8RT1)
+![image](readme_img/status.png)
 #### 问题详情
-[![rs8olD.png](https://s3.ax1x.com/2020/12/22/rs8olD.png)](https://imgchr.com/i/rs8olD)
+![image](readme_img/problem_detail.png)
 #### 提交新问题
-[![rs8hY6.png](https://s3.ax1x.com/2020/12/22/rs8hY6.png)](https://imgchr.com/i/rs8hY6)
+![image](readme_img/publish.png)
 #### 问题讨论区（论坛）
-[![rs8zp8.png](https://s3.ax1x.com/2020/12/22/rs8zp8.png)](https://imgchr.com/i/rs8zp8)
+![image](readme_img/forum.png)
 #### 搜索问题
-[![rsG9XQ.png](https://s3.ax1x.com/2020/12/22/rsG9XQ.png)](https://imgchr.com/i/rsG9XQ)
+![image](readme_img/search.png)
 #### 点击问题查看热门回复
-[![rs8vff.png](https://s3.ax1x.com/2020/12/22/rs8vff.png)](https://imgchr.com/i/rs8vff)
+![image](readme_img/show_reply.png)
 #### 查看全部回复
-[![rsGPmj.png](https://s3.ax1x.com/2020/12/22/rsGPmj.png)](https://imgchr.com/i/rsGPmj)
+![image](readme_img/forum_detail.png)
 #### 回复问题
-[![rs84fK.png](https://s3.ax1x.com/2020/12/22/rs84fK.png)](https://imgchr.com/i/rs84fK)
+![image](readme_img/reply.png)
 #### 回复成功，此时可以删除自己的回复
-[![rs8jtP.png](https://s3.ax1x.com/2020/12/22/rs8jtP.png)](https://imgchr.com/i/rs8jtP)
+![image](readme_img/reply_success.png)
 #### 提交讨论问题
-[![rs8Xkt.png](https://s3.ax1x.com/2020/12/22/rs8Xkt.png)](https://imgchr.com/i/rs8Xkt)
+![image](readme_img/publish_oj_question.png)
 <hr>
 
 ## 项目进度
@@ -123,22 +123,6 @@ OJ网站的灵魂在评测机，既要精确检测出使用了多少内存和时
 <hr>
 
 
-
-
-
-[url=https://imgchr.com/i/rs8olD][img]https://s3.ax1x.com/2020/12/22/rs8olD.png[/img][/url]
-[url=https://imgchr.com/i/rs8fFx][img]https://s3.ax1x.com/2020/12/22/rs8fFx.png[/img][/url]
-[url=https://imgchr.com/i/rs8hY6][img]https://s3.ax1x.com/2020/12/22/rs8hY6.png[/img][/url]
-[url=https://imgchr.com/i/rs8RT1][img]https://s3.ax1x.com/2020/12/22/rs8RT1.png[/img][/url]
-[url=https://imgchr.com/i/rs87OH][img]https://s3.ax1x.com/2020/12/22/rs87OH.png[/img][/url]
-[url=https://imgchr.com/i/rs8vff][img]https://s3.ax1x.com/2020/12/22/rs8vff.png[/img][/url]
-[url=https://imgchr.com/i/rs8Xkt][img]https://s3.ax1x.com/2020/12/22/rs8Xkt.png[/img][/url]
-[url=https://imgchr.com/i/rs84fK][img]https://s3.ax1x.com/2020/12/22/rs84fK.png[/img][/url]
-[url=https://imgchr.com/i/rs8jtP][img]https://s3.ax1x.com/2020/12/22/rs8jtP.png[/img][/url]
-[url=https://imgchr.com/i/rs8zp8][img]https://s3.ax1x.com/2020/12/22/rs8zp8.png[/img][/url]
-[url=https://imgchr.com/i/rsG9XQ][img]https://s3.ax1x.com/2020/12/22/rsG9XQ.png[/img][/url]
-[url=https://imgchr.com/i/rsGPmj][img]https://s3.ax1x.com/2020/12/22/rsGPmj.png[/img][/url]
-[url=https://imgchr.com/i/rsGi0s][img]https://s3.ax1x.com/2020/12/22/rsGi0s.png[/img][/url]
 <!-- 
 ```flow
 st=>start: 开始
