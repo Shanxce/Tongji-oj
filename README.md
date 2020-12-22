@@ -74,31 +74,31 @@ OJ网站的灵魂在评测机，既要精确检测出使用了多少内存和时
 
 ## 部分界面与功能展示
 #### 登录界面
-![image](readme_img/login.png)
+![login](readme_img/login.png)
 #### 主页
-![image](readme_img/home.png)
+![home](readme_img/home.png)
 #### OJ问题查看
-![image](readme_img/problem.png)
+![problem](readme_img/problem.png)
 #### 提交问题状态
-![image](readme_img/status.png)
+![status](readme_img/status.png)
 #### 问题详情
-![image](readme_img/problem_detail.png)
+![problem_detail](readme_img/problem_detail.png)
 #### 提交新问题
-![image](readme_img/publish.png)
+![publish](readme_img/publish.png)
 #### 问题讨论区（论坛）
-![image](readme_img/forum.png)
+![forum](readme_img/forum.png)
 #### 搜索问题
-![image](readme_img/search.png)
+![search](readme_img/search.png)
 #### 点击问题查看热门回复
-![image](readme_img/show_reply.png)
+![show_reply](readme_img/show_reply.png)
 #### 查看全部回复
-![image](readme_img/forum_detail.png)
+![forum_detail](readme_img/forum_detail.png)
 #### 回复问题
-![image](readme_img/reply.png)
+![reply](readme_img/reply.png)
 #### 回复成功，此时可以删除自己的回复
-![image](readme_img/reply_success.png)
+![reply_success](readme_img/reply_success.png)
 #### 提交讨论问题
-![image](readme_img/publish_oj_question.png)
+![publish_oj_question](readme_img/publish_oj_question.png)
 <hr>
 
 ## 项目进度
