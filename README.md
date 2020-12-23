@@ -74,31 +74,31 @@ OJ网站的灵魂在评测机，既要精确检测出使用了多少内存和时
 
 ## 部分界面与功能展示
 #### 登录界面
-![login](readme_img/login.png)
+![login](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/forum.png)
 #### 主页
-![home](readme_img/home.png)
+![home](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/home.png)
 #### OJ问题查看
-![problem](readme_img/problem.png)
+![problem](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/problem.png)
 #### 提交问题状态
-![status](readme_img/status.png)
+![status](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/status.png)
 #### 问题详情
-![problem_detail](readme_img/problem_detail.png)
+![problem_detail](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/problem_detail.png)
 #### 提交新问题
-![publish](readme_img/publish.png)
+![publish](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/publish.png)
 #### 问题讨论区（论坛）
-![forum](readme_img/forum.png)
+![forum](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/forum.png)
 #### 搜索问题
-![search](readme_img/search.png)
+![search](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/search.png)
 #### 点击问题查看热门回复
-![show_reply](readme_img/show_reply.png)
+![show_reply](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/show_reply.png)
 #### 查看全部回复
-![forum_detail](readme_img/forum_detail.png)
+![forum_detail](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/forum_detail.png)
 #### 回复问题
-![reply](readme_img/reply.png)
+![reply](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/reply.png)
 #### 回复成功，此时可以删除自己的回复
-![reply_success](readme_img/reply_success.png)
+![reply_success](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/reply_success.png)
 #### 提交讨论问题
-![publish_oj_question](readme_img/publish_oj_question.png)
+![publish_oj_question](https://github.com/Shanxce/Tongji-oj/blob/main/readme_img/publish_oj_question.png)
 <hr>
 
 ## 项目进度
